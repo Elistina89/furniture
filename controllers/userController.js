@@ -4,7 +4,7 @@ import { User, Basket } from "../models/models.js"
 import jwt from 'jsonwebtoken'
 import dotenv from "dotenv";
 dotenv.config();
-
+//
 
 const generateJwt = (id, email, role) => {
     return jwt.sign({id, email, role}, process.env.SEKRET_KEY, {expiresIn: '24h'})
